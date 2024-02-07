@@ -3,6 +3,8 @@
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
 
+;; always display column numbers
+(setq column-number-mode t) 
 
 ;; I had to set 4 spaces for indentation first
 (setq-default indent-tabs-mode nil)
