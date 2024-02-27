@@ -12,6 +12,20 @@
 (defvaralias 'c-basic-offset 'tab-width)
 ; (defvaralias 'cperl-indent-level 'tab-width)
 
+;; matching parenthesis
+(show-paren-mode 1)
+
+;; set font size to 13pt
+(custom-set-faces
+ '(default ((t (:height 130)))))
+;;;;; In this example, :height 120 sets the font size to 12 points
+;;;;; (since the default unit is 1/10th of a point).
+
+
+;;; (set-frame-font "Source Code Pro-12" nil t)
+;;; ... the font is not available
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 
 (set-face-attribute 'region nil :background "#cce5ff")
 ;;;;; (cua-mode t)
