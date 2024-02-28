@@ -1,3 +1,11 @@
+;; =========================================================
+;;
+;; copy of ~/dotfiles-etc/dot.emacs
+;; git url = git@github.com:cepek/dotfiles-etc.git
+;;
+;; =========================================================
+
+
 ;;disable splash screen and startup message
 
 (setq inhibit-startup-message t)
@@ -15,11 +23,19 @@
 ;; matching parenthesis
 (show-paren-mode 1)
 
-;; set font size to 13pt
+;; set font size to 12pt
 (custom-set-faces
- '(default ((t (:height 130)))))
+ '(default ((t (:height 120)))))
+;;;;;
 ;;;;; In this example, :height 120 sets the font size to 12 points
 ;;;;; (since the default unit is 1/10th of a point).
+
+
+(global-display-line-numbers-mode)
+;; (add-hook 'prog-mode-hook 'display-line-numbers-mode)
+;; (add-hook 'c++-mode-hook 'display-line-numbers-mode)
+;; (add-hook 'c-mode-hook 'display-line-numbers-mode)
+;; (setq linum-format "%3d ")
 
 
 ;;; (set-frame-font "Source Code Pro-12" nil t)

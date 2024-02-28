@@ -2,6 +2,9 @@
 
 Some dotfiles and similar files that I want to keep the track of.
 
+url = git@github.com:cepek/dotfiles-etc.git
+
+
 ## C++ 
 
 After many experiments and tries to find up the best cross-platform
