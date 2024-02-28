@@ -110,6 +110,8 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/"))
-;; (package-initialize) Warning (package): Unnecessary call to
-;;                      ‘package-initialize’ in init file
+(package-initialize)
+
+
+
 
