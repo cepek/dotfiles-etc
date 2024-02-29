@@ -58,7 +58,7 @@
 (require 'package)
 (add-to-list 'package-archives
                  '("melpa" . "http://melpa.org/packages/") t)
-(package-initialize)
+; ------ unnecessary call (package-initialize) -------------
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
