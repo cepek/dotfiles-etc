@@ -5,7 +5,12 @@ Some dotfiles and similar files that I want to keep the track of.
 url = git@github.com:cepek/dotfiles-etc.git
 
 
-# C++
+## CUA mode
+
+CUA mode is implicitly enabled. To switch cua-mode type Alt-x then
+cua-mode and hit return.
+
+## C++
 
 After many experiments and tries to find up the best cross-platform
 independent C++ development environment that would suit me, I have
@@ -18,9 +23,9 @@ have uploaded into this repository, some more may follow or may not.
 These are nothing but simple notes and comments for myself and hardly
 be useful for anyone else.
 
-# Emacs - markdown
+## Emacs - markdown
 
-## Markdown preview
+### Markdown preview
 
 * Generates README.html in the current directory and opens a new tab
   to render it.
@@ -32,7 +37,7 @@ be useful for anyone else.
     M-x markdown-export
 
 
-## Live preview
+### Live preview
 
 * Open live preview in other window.
 
