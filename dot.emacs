@@ -6,7 +6,7 @@
 ;; =========================================================
 
 ;; enable cua mode on startup
-(cua-mode t)
+; (cua-mode t)
 
 ;;disable splash screen and startup message
 

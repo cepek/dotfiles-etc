@@ -7,7 +7,7 @@ url = git@github.com:cepek/dotfiles-etc.git
 
 ## CUA mode
 
-CUA mode is implicitly enabled. To switch cua-mode type Alt-x then
+CUA mode is implicitly disabled. To switch cua-mode type Alt-x then
 cua-mode and hit return.
 
 ## C++
