@@ -14,7 +14,7 @@
 (setq initial-scratch-message nil)
 
 ;; always display column numbers
-(setq column-number-mode t) 
+(setq column-number-mode t)
 
 ;; I had to set 4 spaces for indentation first
 (setq-default indent-tabs-mode nil)
@@ -66,8 +66,8 @@
   (package-install 'use-package))
 (use-package try :ensure t)
 (use-package which-key :ensure t :config (which-key-mode))
- 
- 
+
+
 
 
 (use-package auto-complete
@@ -79,7 +79,7 @@
         ))
 
 
-    
+
 ;;;;; (use-package auto-complete
 ;;;;; (use-package flycheck
 ;;;;;   :ensure t
@@ -115,5 +115,7 @@
 (package-initialize)
 
 
+;;; (add-hook 'write-file-hooks 'delete-trailing-whitespace nil t)
 
-
+;; Automatically remove trailing whitespace on save
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
