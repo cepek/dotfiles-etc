@@ -23,7 +23,20 @@ have uploaded into this repository, some more may follow or may not.
 These are nothing but simple notes and comments for myself and hardly
 be useful for anyone else.
 
-## Emacs - markdown
+## Emacs
+
+## Add 4 columns to Emacs edit window
+
+Suggested by ChatGPT
+
+    (defun my/increase-window-width (width)
+      "Increase the width of the Emacs window by WIDTH characters."
+      (let ((current-width (frame-width)))
+        (set-frame-width (selected-frame) (+ current-width width) t)))
+
+    (add-hook 'emacs-startup-hook (lambda () (my/increase-window-width 4)))
+
+
 
 ### Markdown preview
 
@@ -42,8 +55,3 @@ be useful for anyone else.
 * Open live preview in other window.
 
     M-x markdown-live-preview-mode
-
-* Export the preview and update the other windows on save.
-
-    M-x markdown-live-preview-re-export
-

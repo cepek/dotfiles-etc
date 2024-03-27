@@ -54,6 +54,14 @@
 ; ----------------------------------------------------------
 
 
+(defun my/increase-window-width (width)
+  "Increase the width of the Emacs window by WIDTH characters."
+  (let ((current-width (frame-width)))
+    (set-frame-width (selected-frame) (+ current-width width) t)))
+
+(add-hook 'emacs-startup-hook (lambda () (my/increase-window-width 4)))
+
+
 ;; https://linuxhint.com/c_emacs_configuration/
 
 
@@ -114,6 +122,8 @@
              '("melpa-stable" . "https://stable.melpa.org/packages/"))
 (package-initialize)
 
+
+;; delete trailing whitespaces on saving
 
 ;;; (add-hook 'write-file-hooks 'delete-trailing-whitespace nil t)
 
