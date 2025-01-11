@@ -27,6 +27,10 @@
 
 ;; set font size to 12pt
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(default ((t (:height 120)))))
 ;;;;;
 ;;;;; In this example, :height 120 sets the font size to 12 points
@@ -68,7 +72,6 @@
 (require 'package)
 (add-to-list 'package-archives
                  '("melpa" . "http://melpa.org/packages/") t)
-; ------ unnecessary call (package-initialize) -------------
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -106,13 +109,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(modern-cpp-font-lock auto-complete which-key try use-package markdown-mode irony imenu-list company cmake-mode)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+   '(modern-cpp-font-lock auto-complete which-key try use-package markdown-mode irony imenu-list company))) ;;;  cmake-mode
 
 
 ;; markdown mode for emacs
@@ -120,7 +117,6 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/"))
-(package-initialize)
 
 
 ;; delete trailing whitespaces on saving
@@ -129,3 +125,23 @@
 
 ;; Automatically remove trailing whitespace on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+
+
+;; cmake-mode
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+
+(setq cmake-tab-width 4)
+
+;; Install cmake-mode if not installed
+(unless (package-installed-p 'cmake-mode)
+  (package-refresh-contents)
+  (package-install 'cmake-mode))
+
+;; Load cmake-mode and associate with CMake files
+(require 'cmake-mode)
+(add-to-list 'auto-mode-alist '("CMakeLists\\.txt\\'" . cmake-mode))
+(add-to-list 'auto-mode-alist '("\\.cmake\\'" . cmake-mode))
